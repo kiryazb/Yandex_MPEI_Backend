@@ -1,15 +1,4 @@
-# Овощи, которые растут в каждом из огородов
-first_garden = {'помидоры', 'огурцы', 'морковь'}
-second_garden = {'перец', 'помидоры', 'лук'}
+num_string_1 = '100 13 2 143 12 3 55 4 64 18 56'
+num_string_2 = '234 2 56 432 3 100 12 99 43 18 31 64'
 
-# 1. Овощи, которые растут и в первом, и во втором огороде
-common_vegetables = first_garden & second_garden
-print('Овощи, растущие и в первом, и во втором огороде:', common_vegetables)
-
-# 2. Овощи, которые растут только в первом огороде
-only_first_garden = first_garden - second_garden
-print('Овощи, растущие только в первом огороде:', only_first_garden)
-
-# 3. Овощи, которые растут только во втором огороде
-only_second_garden = second_garden - first_garden
-print('Овощи, растущие только во втором огороде:', only_second_garden)
+print(len(set(num_string_1.split()) & set(num_string_2.split())))

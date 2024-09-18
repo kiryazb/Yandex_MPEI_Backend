@@ -3,7 +3,7 @@ import random
 
 # 1. Создание списка списков:
 ...
-harvest = [[random.randint(5, 21) for i in range(3)] for _ in range(3)]
+harvest = [[random.randint(5, 20) for i in range(3)] for _ in range(3)]
 
 # 2. Функция для подсчёта общего урожая:
 def total_harvest(collection):

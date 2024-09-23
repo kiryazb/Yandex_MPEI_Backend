@@ -1,0 +1,3 @@
+cd путь_до_директории/Dev
+mkdir second_project
+mkdir third_project

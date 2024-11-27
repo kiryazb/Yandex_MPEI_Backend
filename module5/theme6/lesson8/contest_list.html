@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Список заявок
+{% endblock %}
+
+{% block content %}
+  {% for proposal in contest_proposals %}
+    <div>
+      {{ proposal.id }}, {{ proposal.title }}, {{ proposal.price }},
+      {{ proposal.description }}{% if proposal.comment %}, {{ proposal.comment }}{% endif %}
+      <br>
+      <a href="{% url 'contest:edit' pk=proposal.id %}">Редактировать заявку</a>
+      |
+      <a href="{% url 'contest:delete' pk=proposal.id %}">Удалить заявку</a>
+    </div>
+  {% endfor %}
+{% endblock %}

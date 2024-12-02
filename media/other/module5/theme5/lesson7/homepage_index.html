@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}
+  Анфиса для друзей. Главная
+{% endblock %}
+{% block content %}
+  <h1 class="pb-2 mb-0">Главная страница</h1>
+  {% for ice_cream in ice_cream_list %}
+    <h3>{{ ice_cream.title }}</h3>
+    <p>ID: {{ ice_cream.id }}</p>
+    <p>{{ ice_cream.description }}</p>
+    {% comment %} Выведите название обёртки внутри тега <p></p> {% endcomment %}
+    <p>{{ ice_cream.wrapper.title }}</p>
+    {% comment %} если решили через select_related: 
+    {{ ice_cream.wrapper.title }}
+    {% endcomment %}
+  {% endfor %}
+{% endblock %}

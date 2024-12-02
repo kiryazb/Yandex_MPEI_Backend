@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Подать заявку на конкурс
+{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'contest:accepted' %}" method="GET">
+  <p>
+    <label for="title">Название: </label>
+    <input id="title" type="text" name="title" required>
+  </p>
+  <p>
+    <label for="description">Описание: </label>
+    <input id="description" type="text" name="description" required>
+  </p>
+  <p>
+    <label for="price">Цена: </label>
+    <input id="price" type="number" name="price" required>
+    <small>Рекомендованная розничная цена</small>
+  </p>
+  <p>
+    <label for="comment">Комментарий: </label>
+    <input id="comment" type="text" name="comment">
+  </p>
+  <input type="submit" value="Отправить">
+</form>
+
+{% endblock %}

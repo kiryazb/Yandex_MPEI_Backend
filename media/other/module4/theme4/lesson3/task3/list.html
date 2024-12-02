@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}
+  Анфиса для друзей. Список мороженого
+{% endblock %}
+{% block content %}
+  <h1>Каталог мороженого</h1>
+  <ul>
+    {% for item in catalog %}
+    <li>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+      {% if not forloop.last %}
+      <hr>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

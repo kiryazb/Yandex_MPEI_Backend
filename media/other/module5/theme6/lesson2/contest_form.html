@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Подать заявку на конкурс
+{% endblock %}
+
+{% block content %}
+
+<form method="GET" action="{% url 'contest:accepted' %}">
+  <table>
+    {{ form }}
+  </table>
+  <input type="submit" name="submit" value="Отправить">
+</form>
+
+{% endblock %}

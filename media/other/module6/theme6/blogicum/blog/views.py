@@ -179,7 +179,7 @@ class CommentDeleteView(DeleteView):
 
 class PostListView(BasePostQueryMixin, ListView):
     model = Post
-    paginate_by = 10
+    paginate_by = 5
 
     def get_queryset(self):
         return self.get_base_post_queryset()
@@ -264,3 +264,4 @@ class ProfileDetailView(DetailView):
         context['page_obj'] = page_obj
 
         return context
+        
